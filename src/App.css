@@ -1,38 +1,166 @@
-.App {
-  text-align: center;
+/** 
+============================================================
+Resets
+============================================================
+**/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  font-family: "Roboto";
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/** 
+============================================================
+Main Content
+============================================================
+**/
+
+body {
+  max-width: 50%;
+  margin-top: 3rem;
+  margin-left: 3rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/** 
+============================================================
+Header
+============================================================
+**/
+
+.review-header {
+  border-bottom: 1px solid gray;
+  padding-bottom: 0.6rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.community-review-header {
+  border-bottom: 1px solid gray;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  padding-bottom: 0.35rem;
+}
+
+.header-stats {
+  margin-top: 0.6rem;
   display: flex;
-  flex-direction: column;
+  justify-content: flex-start;
+  font-size: 0.9rem;
+}
+
+.community-rating-stars {
+  margin-right: 0.8rem;
+}
+
+.header-stats > p {
+  margin: 0 1rem;
+}
+
+/** 
+============================================================
+Submit Review
+============================================================
+**/
+
+/** 
+============================================================
+User Reviews
+============================================================
+**/
+
+.reviews {
+  margin-top: 1rem;
+}
+
+.current-user-rating {
+  margin-top: 1rem;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.current-user-rating-stars {
+  font-size: 1.3rem;
+}
+
+#write-review-btn {
+  margin-left: 0.65rem;
+  border: none;
+  border-radius: 5px;
+  width: 150px;
+  height: 40px;
+  background-color: dodgerblue;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#write-review-btn:hover {
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.user-review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.user-rating {
+  display: flex;
+  align-items: center;
+
+  align-self: stretch;
+}
+
+.review {
+  margin-top: 1.75rem;
+}
+
+.user-rating-header {
+  display: flex;
+  margin-left: 0.85rem;
+}
+
+.user-avatar {
+  border-radius: 50%;
+}
+
+.user-rating-stars {
+  margin-left: 0.55rem;
 }
